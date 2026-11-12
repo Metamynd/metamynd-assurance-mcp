@@ -1,0 +1,29 @@
+{
+  "name": "@metamynd/assurance-mcp",
+  "version": "0.1.0",
+  "description": "MetaMynd Agent Readiness Reports as MCP tools: list, read, issue and verify an agent's readiness report, read fix drafts, and ask about a report, from Claude, Cursor or any MCP app.",
+  "keywords": ["mcp", "model-context-protocol", "ai-agents", "agent-readiness", "governance", "metamynd"],
+  "license": "MIT",
+  "author": "MetaMynd",
+  "homepage": "https://github.com/Metamynd/metamynd-assurance-mcp#readme",
+  "repository": { "type": "git", "url": "git+https://github.com/Metamynd/metamynd-assurance-mcp.git" },
+  "bugs": { "url": "https://github.com/Metamynd/metamynd-assurance-mcp/issues" },
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "bin": { "assurance-mcp": "src/cli.mjs" },
+  "files": ["src", "README.md", "LICENSE", "SECURITY.md"],
+  "publishConfig": { "access": "public" },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node --test \"test/**/*.test.mjs\"",
+    "check": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.2.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.2.0",
+    "@types/node": "22.20.4",
+    "typescript": "5.9.3"
+  }
+}
